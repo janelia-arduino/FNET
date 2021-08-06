@@ -1544,11 +1544,11 @@ static fnet_bool_t _fnet_tcp_inputsk( fnet_socket_if_t *sk, fnet_netbuf_t *inseg
         switch(cb->tcpcb_connection_state)
         {
             case FNET_TCP_CS_LISTENING:
-                if((sgmtype & FNET_TCP_SGT_ACK) != 0u)
-                {
-                    /* Send the reset segment.*/
-                    _fnet_tcp_send_rst(&sk->options, insegment, dest_addr, src_addr);
-                }
+//                if((sgmtype & FNET_TCP_SGT_ACK) != 0u)
+//                {
+//                    /* Send the reset segment.*/
+//                    _fnet_tcp_send_rst(&sk->options, insegment, dest_addr, src_addr);
+//                }
                 exit_flag = FNET_TRUE;
                 break;
             case FNET_TCP_CS_SYN_SENT:
